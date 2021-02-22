@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Courier New", Courier, monospace;
+}
+
+body {
+  overflow: hidden;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: rgb(10, 6, 6);
+}
+
+h1 {
+  position: absolute;
+  font-size: 10vh;
+  color: rgb(222, 221, 221);
+  text-align: center;
+  line-height: 2em;
+  z-index: 10;
+  transform: skewY(-9deg);
+  text-shadow: 5px 5px 0 #222, 6px 6px 0 #333, 8px 8px 0 #444, 10px 10px 0 #555,
+    12px 12px 0 #666;
+  animation: floating 3s ease-in infinite;
+}
+
+h1 span {
+  font-size: 30vh;
+}
+
+@keyframes floating {
+  0%,
+  100% {
+    transform: skewY(-9deg) translate(0, -20px);
+  }
+  50% {
+    transform: skewY(-9deg) translate(0, 20px);
+  }
+}
